@@ -1,14 +1,7 @@
-# dylankenneally.com
-- quick and dirty 'holding' site for http://www.dylankenneally.com
+# Coming soon page
 
-# To install, build or run
-```bash
-# install node deps
-npm install
+A basic "holding" page for new client sites, displayed on their main URL while their site is being built.
 
-# to build (for deployment)
-npm run build
+## To use
 
-# to start (for development)
-npm start
-```
+- Find `site-address` in the SVG content, update with the clients URL
