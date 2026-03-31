@@ -1,0 +1,13 @@
+{
+  "name": "dylankenneally-com",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal website for Dylan Kenneally, built with Eleventy.",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}
