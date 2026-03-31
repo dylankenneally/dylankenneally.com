@@ -92,9 +92,39 @@
               <p>
                 My background includes desktop engineering, real-time simulation, distributed systems,
                 front-end architecture, cloud delivery and mobile product work. The common thread is
-                building things that need to feel dependable in the hands of real users.
+                that I like software which has to hold up in the real world, not just in a demo.
               </p>
             </div>
+          </div>
+        </section>
+
+        <section class="panel panel-projects" id="projects">
+          <div class="section-heading">
+            <p class="eyebrow">Featured work</p>
+            <h2>A few things that show how I like to build.</h2>
+          </div>
+
+          <div class="project-grid">
+            {% for project in site.projects %}
+              <article class="project-card">
+                <p class="eyebrow">{{ project.source }}</p>
+                <h3>{{ project.title }}</h3>
+                <p class="project-summary">{{ project.summary }}</p>
+                <p>{{ project.detail }}</p>
+
+                <div class="chip-list" aria-label="{{ project.title }} technologies">
+                  {% for item in project.stack %}
+                    <span class="chip">{{ item }}</span>
+                  {% endfor %}
+                </div>
+
+                <div class="project-links">
+                  {% for link in project.links %}
+                    <a href="{{ link.href }}">{{ link.label }}</a>
+                  {% endfor %}
+                </div>
+              </article>
+            {% endfor %}
           </div>
         </section>
 
