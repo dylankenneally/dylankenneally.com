@@ -1,7 +1,38 @@
-# Coming soon page
+# dylankenneally.com
 
-A basic "holding" page for new client sites, displayed on their main URL while their site is being built.
+Personal website for Dylan Kenneally, built with [Eleventy (11ty)](https://11ty.dev/) and deployed to GitHub pages at [dylankenneally.com](https://dylankenneally.com/).
 
-## To use
+## To build & run
 
-- Find `site-address` in the SVG content, update with the clients URL
+### Prerequisites
+
+- Install [Node.js](https://nodejs.org/en)
+  - Version 24.12.0 has been used in development, but any recent version should work.
+
+### Getting the source code
+
+```bash
+git clone git@github.com:dylankenneally/dylankenneally.github.io.git
+cd dylankenneally.github.io
+```
+
+### Install dependencies & start a development server
+
+```bash
+npm install
+npm start
+# open http://localhost:8080 in your browser
+```
+
+### Available scripts
+
+The following scripts are available once `npm install` has been ran.
+
+| Script | Action |
+| - | - |
+| `npm start` | **Starts the development server** after building the site. |
+| `npm run build` | Performs a **production build** of the site/app to `./build`. |
+
+## Deployment
+
+Pushes to the `master` branch are automatically deployed to [dylankenneally.com](https://dylankenneally.com/).

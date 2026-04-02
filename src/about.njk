@@ -1,0 +1,54 @@
+---
+layout: base.njk
+pageTitle: About
+pageDescription: About Dylan Kenneally, a Melbourne-based software engineer available for hire.
+---
+<main>
+  <section class="panel page-intro">
+    <div class="section-heading">
+      <p class="eyebrow">About me</p>
+      <h1 class="page-title">A bit of the person behind the CV.</h1>
+    </div>
+    <p class="lead">{{ site.summary }}</p>
+  </section>
+
+  <section class="panel panel-about">
+    <div class="about-grid">
+      {% for item in site.aboutSections %}
+        <article class="about-card">
+          <h2>{{ item.title }}</h2>
+          <p>{{ item.body }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="panel panel-personal">
+    <div class="section-heading">
+      <p class="eyebrow">Outside the IDE</p>
+      <h2>Still a person.</h2>
+    </div>
+
+    <div class="personal-grid">
+      {% for item in site.personal %}
+        <p>{{ item }}</p>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="panel panel-split">
+    <div class="split-card">
+      <p class="eyebrow">Projects</p>
+      <h2>The side-project and product view.</h2>
+      <p>If you want the practical version of all this, the projects page is probably the best next stop.</p>
+      <a class="text-link" href="/projects/">Go to projects</a>
+    </div>
+
+    <div class="split-card">
+      <p class="eyebrow">CV</p>
+      <h2>The compact version.</h2>
+      <p>If you would rather skim a standard résumé, the PDF is still there.</p>
+      <a class="text-link" href="{{ site.cvHref }}">Download CV</a>
+    </div>
+  </section>
+</main>
