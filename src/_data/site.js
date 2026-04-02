@@ -1,7 +1,13 @@
-module.exports = {
+export default {
   title: "Dylan Kenneally",
   description:
     "Melbourne-based software engineer available for contract work and open to full-time roles.",
+  navigation: [
+    {label: "Home", href: "/"},
+    {label: "Projects", href: "/projects/"},
+    {label: "About", href: "/about/"},
+    {label: "Contact", href: "#contact"}
+  ],
   email: "hello@dylankenneally.com",
   phone: "REVIEW ME",
   location: "South Yarra, Melbourne, Australia",
@@ -18,7 +24,7 @@ module.exports = {
   ],
   hiringNotes: [
     "Based in Melbourne and actively exploring local opportunities",
-    "Contract is the current preference, with full-time still on the table",
+    "Available for contract roles & open to the right full-time opportunity",
     "Most interested in product teams working with JavaScript, TypeScript, Node.js and AWS"
   ],
   links: [
@@ -68,7 +74,7 @@ module.exports = {
       eyebrow: "Current market",
       title: "Melbourne roles, especially contract engagements",
       body:
-        "I am actively looking in Melbourne, with a preference for contract work. That said, I am not doctrinaire about it. If a full-time role has the right people, autonomy and technical challenge, I would gladly have the conversation."
+        "I am actively looking in Melbourne, with a preference for contract work. That said, I am not doctrinaire about it. If a full-time role has the right people, culture and technical challenge, I would gladly have the conversation."
     },
     {
       eyebrow: "Preferred stack",
@@ -85,7 +91,7 @@ module.exports = {
         "An open source SSH and SFTP client library for React Native that I built out and published to npm.",
       detail:
         "It is a good example of the kind of work I enjoy: practical mobile engineering, native platform edges, TypeScript-friendly APIs and documentation that helps people actually get the thing working.",
-      stack: ["React Native", "TypeScript", "iOS", "Android"],
+      stack: ["React Native", "TypeScript", "iOS", "Android", "Objective-C", "Java"],
       links: [
         {
           label: "GitHub",
@@ -94,25 +100,29 @@ module.exports = {
         {
           label: "npm",
           href: "https://www.npmjs.com/package/@dylankenneally/react-native-ssh-sftp"
+        },
+        {
+          label: "Documentation",
+          href: "https://dylankenneally-react-native-ssh-sftp-96.mintlify.app/introduction"
         }
       ]
     },
     {
-      title: "Budget Planner",
-      source: "GitHub and kenneally.dev",
+      title: "HTTP Statuses",
+      source: "GitHub and live project",
       summary:
-        "A personal budgeting app built partly for fun and partly to explore front-end ideas I do not always get to use in client work.",
+        "A reference site for HTTP status codes that turns dry protocol details into something a bit more usable and pleasant.",
       detail:
-        "It pulls together React, Material UI, charting and localisation work in a way that feels product-minded rather than purely experimental. It is the kind of side project I enjoy because it stays grounded in something useful.",
-      stack: ["React", "Material UI", "i18next", "Chart.js"],
+        "I like projects like this because they sit at the intersection of useful information architecture, front-end craft and developer ergonomics. It is practical, slightly nerdy and hopefully nicer to use than the average reference page.",
+      stack: ["Reference site", "Front end", "Developer tool", "11ty"],
       links: [
         {
           label: "GitHub",
-          href: "https://github.com/dylankenneally/budget-planner"
+          href: "https://github.com/dylankenneally/http-statuses"
         },
         {
-          label: "Playground entry",
-          href: "https://kenneally.dev/budget-planner/"
+          label: "Visit HTTP Statuses",
+          href: "https://httpstatuses.kenneally.dev/"
         }
       ]
     },
@@ -123,12 +133,71 @@ module.exports = {
         "My little corner of the internet for experiments, side projects and ideas that do not need to pretend to be enterprise software.",
       detail:
         "I wanted this site to hint at that side of me too. The playground matters because it shows I still like making things, trying ideas quickly and keeping some curiosity in the work.",
-      stack: ["Experiments", "UI ideas", "Side projects"],
+      stack: ["Experiments", "UI ideas", "Side projects", "three.js "],
       links: [
+        {
+          label: "GitHub",
+          href: "https://github.com/dylankenneally/dylankenneally.github.io"
+        },
         {
           label: "Visit kenneally.dev",
           href: "https://kenneally.dev/"
         }
+      ]
+    }
+  ],
+  commercialProjects: [
+    {
+      title: "AiVA",
+      company: "Speedshield Technologies",
+      role: "Lead Contract Developer",
+      href: "https://www.speedshield.com/products/aiva-pedestrian-detection-system",
+      summary: "AI-assisted pedestrian detection product built with React Native and AWS, where I was the primary engineer across app, cloud infrastructure and delivery pipeline.",
+      bullets: [
+        "Built the AiVA mobile application & cloud platform from the ground up using React Native, AWS SAM, EC2, Lambda, API Gateway, S3, Route 53 and VPC.",
+        "Introduced automated DevOps build, test and deployment pipelines to remove manual release steps and speed up production delivery.",
+        "Reduced infrastructure overhead by moving from isolated developer environments to centralised orchestrated deployments.",
+        "Published an open source React Native SSH/SFTP library",
+        "Drove adoption of a cohesive design system across the product."
+      ]
+    },
+    {
+      title: "Fusion 360",
+      company: "Autodesk",
+      role: "Software Architect / Principal Engineer",
+      href: "https://www.autodesk.com/products/fusion-360/overview",
+      summary: "Worked on Moldflow integration within Fusion 360 and on the surrounding simulation and platform architecture needed to support that product experience.",
+      bullets: [
+        "Owned technical direction for Moldflow product lines and their integration with Fusion 360.",
+        "Designed and delivered distributed worker-node orchestration and file-management systems for scalable simulation workloads.",
+        "Built real-time 3D mesh generation and simulation experiences using React, JavaScript, C++, C#, Docker, OpenGL and VTK.",
+        "Mentored engineers, ran internal tech talks and regularly stepped in to improve team delivery rhythms."
+      ]
+    },
+    {
+      title: "Moldflow",
+      company: "Autodesk",
+      role: "Software Architect / Principal Engineer / Senior Engineer",
+      href: "https://www.autodesk.com/au/products/moldflow/overview",
+      summary: "Long-running commercial simulation product line where I worked across architecture, distributed systems, real-time 3D tooling and technical leadership.",
+      bullets: [
+        "Owned technical direction for Moldflow product lines and their integration with Fusion 360.",
+        "Designed and delivered distributed worker-node orchestration and file-management systems for scalable simulation workloads.",
+        "Built real-time 3D mesh generation and simulation experiences using C++, C#, OpenGL and VTK.",
+        "Mentored engineers, ran internal tech talks and regularly stepped in to improve team delivery rhythms."
+      ]
+    },
+    {
+      title: "DFM",
+      company: "Autodesk",
+      role: "Principal Engineer",
+      href: "https://www.autodesk.com/au/products/fusion-360/design-for-manufacturing",
+      summary: "Design-for-manufacturing tooling focused on helping designers get fast feedback on manufacturability, simulation and injection moulding concerns.",
+      bullets: [
+        "Owned technical direction for DFM product lines and their integration with Fusion 360.",
+        "Designed and delivered distributed worker-node orchestration and file-management systems for scalable simulation workloads.",
+        "Built real-time 3D mesh generation and simulation experiences using C++, C#, OpenGL and VTK.",
+        "Mentored engineers, ran internal tech talks and regularly stepped in to improve team delivery rhythms."
       ]
     }
   ],
@@ -201,5 +270,22 @@ module.exports = {
     "I can move between architecture, implementation, product conversations and mentoring without needing to turn any of them into theatre.",
     "Outside work I am into literature, woodworking, music and occasional volunteering."
   ],
-  cvHref: "/assets/files/dylan-kenneally-cv-march-2026.pdf"
+  aboutSections: [
+    {
+      title: "How I tend to work",
+      body:
+        "I am not especially interested in performing seniority. I like doing the work, being useful in the messy middle of a project, and helping a team make good decisions without turning everything into a grand architectural event."
+    },
+    {
+      title: "What I bring to a team",
+      body:
+        "A lot of my career has involved moving between product thinking, implementation detail, systems architecture and mentoring. That means I can usually help in more than one layer of the problem at once, which is often where the value is."
+    },
+    {
+      title: "What I am looking for next",
+      body:
+        "At the moment I am most interested in Melbourne-based teams doing solid product work with React, React Native, TypeScript, Node.js and AWS. Contract work is the current preference, though I am open to the right full-time role."
+    }
+  ],
+  cvHref: "/assets/files/dylan_kenneally_cv_april-2026_for_homepage.pdf"
 };

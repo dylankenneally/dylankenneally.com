@@ -1,0 +1,82 @@
+---
+layout: base.njk
+pageTitle: Projects
+pageDescription: Featured side projects and commercial products Dylan Kenneally has worked on.
+---
+<main>
+  <section class="panel page-intro">
+    <div class="section-heading">
+      <p class="eyebrow">Projects</p>
+      <h1 class="page-title">A mix of side projects, experiments and commercial products.</h1>
+    </div>
+    <p class="lead">
+    This page shows examples of both sides of my work: the things I build for curiosity and craft, and the products I have helped bring to market.
+    </p>
+  </section>
+
+  <section class="panel panel-commercial" id="commercial-products">
+    <div class="section-heading">
+      <p class="eyebrow">Commercial products</p>
+      <h2>Products I have worked on professionally.</h2>
+    </div>
+
+    <div class="commercial-grid">
+      {% for item in site.commercialProjects %}
+        <article class="commercial-card" id="project-{{ item.title | slugify }}">
+          <p class="eyebrow">{{ item.company }}</p>
+          <h3>{{ item.title }}</h3>
+          <p class="project-summary">{{ item.role }}</p>
+          <p>{{ item.summary }}</p>
+
+          <div>
+            <ul class="focus-list">
+              {% for bullet in item.bullets %}
+                <li>{{ bullet }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <div class="project-links">
+            <a href="{{ item.href }}" target="_blank" rel="nofollow external noopener noreferrer">
+              <span class="material-symbols-outlined">{% include "open_new_tab.svg" %}</span>
+              Visit product site
+            </a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="panel panel-projects">
+    <div class="section-heading">
+      <p class="eyebrow">Featured work</p>
+      <h2>The smaller things that still say something useful.</h2>
+    </div>
+
+    <div class="project-grid">
+      {% for project in site.projects %}
+        <article class="project-card">
+          <p class="eyebrow">{{ project.source }}</p>
+          <h3>{{ project.title }}</h3>
+          <p class="project-summary">{{ project.summary }}</p>
+          <p>{{ project.detail }}</p>
+
+          <div class="chip-list" aria-label="{{ project.title }} technologies">
+            {% for item in project.stack %}
+              <span class="chip">{{ item }}</span>
+            {% endfor %}
+          </div>
+
+          <div class="project-links">
+            {% for link in project.links %}
+              <a href="{{ link.href }}" target="_blank" rel="nofollow external noopener noreferrer">
+                {{ link.label }}
+                <span class="material-symbols-outlined">{% include "open_new_tab.svg" %}</span>
+              </a>
+            {% endfor %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+</main>

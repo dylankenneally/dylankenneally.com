@@ -100,6 +100,14 @@ a {
   position: relative;
 }
 
+.page-title {
+  margin: 0;
+  font-family: "Fraunces", serif;
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.9fr);
@@ -168,7 +176,7 @@ a {
   font-size: clamp(3.2rem, 8vw, 6.6rem);
 }
 
-.lede,
+.lead,
 .availability,
 .card-copy,
 .section-heading + p,
@@ -180,7 +188,7 @@ a {
   color: var(--muted);
 }
 
-.lede {
+.lead {
   max-width: 42rem;
   margin: 1.5rem 0 1rem;
   font-size: 1.1rem;
@@ -328,6 +336,7 @@ main,
 
 .panel-stack,
 .panel-projects,
+.panel-commercial,
 .panel-personal,
 .footer-panel {
   background: var(--paper-strong);
@@ -383,6 +392,10 @@ main,
   gap: 1rem;
 }
 
+.page-intro {
+  margin-top: 1.5rem;
+}
+
 .project-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -424,10 +437,107 @@ main,
   font-weight: 700;
 }
 
+.commercial-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.commercial-link {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 11rem;
+  padding: 1rem 1.1rem;
+  text-decoration: none;
+  border-radius: 18px;
+  border: 1px solid rgba(14, 122, 114, 0.18);
+  background: rgba(14, 122, 114, 0.08);
+}
+
+.commercial-link span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.commercial-grid,
+.about-grid,
+.panel-split {
+  display: grid;
+  gap: 1rem;
+}
+
+.commercial-grid,
+.about-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.commercial-card,
+.about-card,
+.split-card {
+  padding: 1.35rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.about-card h2,
+.split-card h2,
+.commercial-card h3 {
+  margin: 0 0 0.8rem;
+  font-size: 1.35rem;
+  line-height: 1.1;
+}
+
+.section-link {
+  margin: 1.25rem 0 0;
+  text-align: right;
+}
+
+.section-link a,
+.text-link {
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.panel-split {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .focus-list {
   display: grid;
   gap: 0.95rem;
   font-size: 1.05rem;
+}
+
+.commercial-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.commercial-card .focus-list li {
+  color: var(--muted);
+}
+
+.project-links {
+  align-items: center;
+}
+
+.commercial-card .project-links {
+  flex-direction: row-reverse;
+  padding-top: 1.25rem;
+  /* align-items: center; */
+}
+
+.material-symbols-outlined {
+  width: 1rem;
+  height: 1.25rem;
+}
+
+.project-card a,
+.commercial-card a {
+  display: contents;
 }
 
 .note-card {
@@ -509,6 +619,7 @@ main,
 .footer-phone {
   margin: 0;
   font-size: 1.05rem;
+  max-width: 10rem;
 }
 
 .footer-phone {
@@ -543,6 +654,9 @@ main,
   .highlight-grid,
   .project-grid,
   .focus-layout,
+  .commercial-grid,
+  .about-grid,
+  .panel-split,
   .personal-grid,
   .footer-layout {
     grid-template-columns: 1fr;
