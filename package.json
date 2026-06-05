@@ -21,6 +21,6 @@
   "author": "Dylan Kenneally",
   "type": "module",
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.5"
+    "@11ty/eleventy": "^3.1.6"
   }
 }
